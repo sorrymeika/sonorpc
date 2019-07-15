@@ -1,0 +1,14 @@
+{
+  "name": "snonoipc",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./lib/index",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "node scripts/start.js",
+    "connect": "node scripts/test.js"
+  }
+}
