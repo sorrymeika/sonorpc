@@ -1,2 +1,2 @@
-# sonoipc
-nodejs ipc
+# sonorpc
+nodejs rpc
