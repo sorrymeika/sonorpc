@@ -3,7 +3,9 @@ const { parseInvoker } = require('../lib/data/parser');
 const port = 3005;
 
 const server = net.createServer((socket) => {
-    socket.setTimeout(3000);
+    console.log(socket.remoteAddress);
+
+    // socket.setTimeout(3000);
     socket.on('timeout', () => {
         console.log('socket timeout');
         socket.end('goodbye\n');
