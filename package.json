@@ -9,6 +9,9 @@
   "dependencies": {},
   "scripts": {
     "start": "node scripts/start.js",
-    "connect": "node scripts/test.js"
+    "connect": "node scripts/test.js",
+    "registry": "node scripts/registry.js",
+    "provider": "node scripts/provider.js",
+    "consumer": "node scripts/consumer.js"
   }
 }
