@@ -40,6 +40,8 @@ scripts/start.js
 ```javascript
 const { createProvider } = requie("sonorpc");
 const provider = createProvider({
+    // 注册服务提供者名称
+    name: 'user',
     // 日志类示例
     logger: console,
     // 监听端口
@@ -83,6 +85,8 @@ consumer.js
 const { registerConsumer } = require('sonorpc');
 
 const consumer = registerConsumer({
+    // 服务提供者名称
+    providerName: '',
     port: 3006
 });
 
