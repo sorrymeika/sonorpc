@@ -86,7 +86,7 @@ const { registerConsumer } = require('sonorpc');
 
 const consumer = registerConsumer({
     // 服务提供者名称
-    providerName: '',
+    providerName: 'user',
     port: 3006
 });
 
