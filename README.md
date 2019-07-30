@@ -24,10 +24,11 @@ DemoService.js
 const { Service } = requie("sonorpc");
 
 class DemoService extends Service {
-    sayHello(arg1, arg2) {
+    async sayHello(arg1, arg2) {
+        const result = await this.ctx.mysql.query('select * from user');
         return {
             success: true,
-            data: ['any data']
+            data: result
         }
     }
 }
@@ -44,6 +45,10 @@ const provider = createProvider({
     name: 'user',
     // 日志类示例
     logger: console,
+    // 上下文
+    ctx: {
+        mysql: mysql.createPool(config.mysql)
+    },
     // 监听端口
     port: 3005,
     // 服务类
