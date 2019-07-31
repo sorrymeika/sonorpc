@@ -6,6 +6,14 @@
     "type": "git",
     "url": "https://github.com/sorrymeika/sonorpc.git"
   },
+  "keywords": [
+    "rpc",
+    "nodejs rpc",
+    "rpc provider",
+    "rpc consumer",
+    "rpc registry",
+    "tcp"
+  ],
   "devDependencies": {
     "eslint": "^6.0.1"
   },
