@@ -1,6 +1,6 @@
 {
-  "name": "snonorpc",
-  "version": "0.1.4",
+  "name": "sonorpc",
+  "version": "0.0.2",
   "main": "./lib/index",
   "repository": {
     "type": "git",
