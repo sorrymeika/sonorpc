@@ -92,7 +92,9 @@ const { registerConsumer } = require('sonorpc');
 const consumer = registerConsumer({
     // 服务提供者名称
     providerName: 'user',
-    port: 3006
+    registry: {
+        port: 3006
+    }
 });
 
 module.exports = consumer;
