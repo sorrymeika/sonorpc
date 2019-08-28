@@ -15,7 +15,7 @@
     "tcp"
   ],
   "devDependencies": {
-    "eslint": "^6.0.1"
+    "eslint": "^6.2.2"
   },
   "dependencies": {},
   "scripts": {
