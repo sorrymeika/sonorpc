@@ -1,5 +1,6 @@
 const net = require('net');
 const { parseInvoker } = require('../lib/data/parser');
+const socketUtils = require('../lib/socket-utils');
 const port = 3005;
 
 const server = net.createServer((socket) => {
@@ -11,7 +12,7 @@ const server = net.createServer((socket) => {
         socket.end('goodbye\n');
     });
 
-    socket.on('data', (buf) => {
+    socketUtils.onReceiveBlock(socket, (type, buf) => {
         console.log(buf);
         const invoker = parseInvoker(buf);
 

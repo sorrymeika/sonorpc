@@ -1,7 +1,8 @@
 const net = require('net');
 const { formatInvoker } = require('../lib/data/formater');
-const port = 3005;
+const socketUtils = require('../lib/socket-utils');
 
+const port = 3005;
 
 const client = net.createConnection({ port, timeout: 1000 }, () => {
     // 'connect' listener
@@ -11,10 +12,10 @@ const client = net.createConnection({ port, timeout: 1000 }, () => {
 
     console.log(invoker);
 
-    client.write(invoker.content);
+    socketUtils.sendBlock(client, invoker.content);
 });
 
-client.on('data', (data) => {
+socketUtils.onReceiveBlock(client, (type, data) => {
     console.log(data.toString());
     client.end();
 });
