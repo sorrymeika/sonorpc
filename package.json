@@ -1,7 +1,7 @@
 {
   "name": "sonorpc",
   "version": "0.0.7",
-  "main": "./lib/index",
+  "main": "./index",
   "repository": {
     "type": "git",
     "url": "https://github.com/sorrymeika/sonorpc.git"

@@ -25,7 +25,7 @@ const { Service } = requie("sonorpc");
 
 class DemoService extends Service {
     async sayHello(arg1, arg2) {
-        const result = await this.ctx.mysql.query('select * from user');
+        const result = await this.app.mysql.query('select * from user');
         return {
             success: true,
             data: result
@@ -46,13 +46,13 @@ const provider = createProvider({
     // 日志类示例
     logger: console,
     // 上下文
-    ctx: {
+    app: {
         mysql: mysql.createPool(config.mysql)
     },
     // 监听端口
     port: 3005,
     // 服务类
-    serviceClasses: [DemoService],
+    services: [DemoService],
     // 注册中心配置
     registry: {
         // 注册中心地址

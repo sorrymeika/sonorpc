@@ -1,4 +1,4 @@
-const { createProvider, Service } = require('../lib');
+const { createProvider, Service } = require('..');
 
 class TestService extends Service {
     test() {

@@ -1,4 +1,4 @@
-const { registerConsumer } = require('../lib');
+const { registerConsumer } = require('..');
 
 const consumer = registerConsumer({
     registry: {

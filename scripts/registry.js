@@ -1,4 +1,4 @@
-const { startRegistry } = require('../lib');
+const { startRegistry } = require('..');
 
 startRegistry({
     port: 3006
