@@ -17,10 +17,14 @@
   "devDependencies": {
     "eslint": "^6.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ioredis": "^4.14.1",
+    "mysql2": "^2.1.0",
+    "parameter": "^3.6.0"
+  },
   "scripts": {
     "start": "node scripts/start.js",
-    "connect": "node scripts/test.js",
+    "connect": "node scripts/connect.js",
     "registry": "node scripts/registry.js",
     "provider": "node scripts/provider.js",
     "consumer": "node scripts/consumer.js"

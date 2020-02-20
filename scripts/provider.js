@@ -6,8 +6,10 @@ class TestService extends Service {
 }
 
 createProvider({
-    port: 3005,
     serviceClasses: [TestService],
+    provider: {
+        port: 3005,
+    },
     registry: {
         port: 3006
     }
