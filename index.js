@@ -1,7 +1,7 @@
 const { parseInvoker, parseData } = require('./lib/data/parser');
 const { formatInvoker, formatData } = require('./lib/data/formater');
 const { startRegistry } = require('./lib/Registry');
-const { createConsumer } = require('./lib/Consumer');
+const { createConsumer } = require('./lib/consumer/consumer');
 const { startProvider } = require('./lib/provider/provider');
 const Service = require('./lib/provider/service');
 const Dao = require('./lib/mysql/dao');

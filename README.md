@@ -18,7 +18,18 @@ import { createProvider } from "sonorpc"
 
 ### 创建服务
 
-DemoService.js
+app/config.js
+
+```javascript
+exports.mysql = {
+    host: '',
+    user: '',
+    password: '',
+    database: ''
+};
+```
+
+app/service/demo.js
 
 ```javascript
 const { Service } = requie("sonorpc");
@@ -39,33 +50,9 @@ class DemoService extends Service {
 scripts/start.js
 
 ```javascript
-const { createProvider } = requie("sonorpc");
-const provider = createProvider({
-    // 注册服务提供者名称
-    name: 'user',
-    // 日志类示例
-    logger: console,
-    // 上下文
-    app: {
-        mysql: mysql.createPool(config.mysql)
-    },
-    // 监听端口
-    port: 3005,
-    // 服务类
-    services: [DemoService],
-    // 注册中心配置
-    registry: {
-        // 注册中心地址
-        host: '127.0.0.1',
-        // 注册中心端口
-        port: 3006
-    }
-});
-
-provider.start(() => {
-    console.log('服务已启动');
-});
+require('sonorpc').startProvider();
 ```
+
 
 ## Registry注册中心
 
@@ -102,16 +89,14 @@ module.exports = consumer;
 
 ### 调用服务
 
-DemoService.js
+service/DemoService.js
 
 ```javascript
 const consumer = require('../consumer');
 
 class DemoService {
     testMe(...args) {
-        return new Promise((resolve, reject) => consumer.invoke('demo.testMe', args, (err, data) => {
-            err ? reject(err) : resolve(data);
-        }));
+        return consumer.invoke('demo.testMe', args);
     }
 }
 ```
