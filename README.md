@@ -10,10 +10,6 @@ sonorpc是一个轻量级、高性能的node rpc框架，由Registry(注册中�
 
 `npm install sonorpc`
 
-```javascript
-import { createProvider } from "sonorpc"
-```
-
 ## Provider服务提供者
 
 ### 创建服务
@@ -25,7 +21,7 @@ exports.mysql = {
     host: '',
     user: '',
     password: '',
-    database: ''
+    database: '',
 };
 ```
 
@@ -40,7 +36,7 @@ class DemoService extends Service {
         return {
             success: true,
             data: result
-        }
+        };
     }
 }
 ```
