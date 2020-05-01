@@ -20,7 +20,8 @@
   "dependencies": {
     "ioredis": "^4.14.1",
     "mysql2": "^2.1.0",
-    "parameter": "^3.6.0"
+    "parameter": "^3.6.0",
+    "redlock": "^4.1.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
